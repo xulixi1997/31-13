@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRIPLE MH SERVICE INC | Global Logistics & Industrial Solutions</title>
+    <meta name="description" content="Premium logistics, construction, and industrial services provided by Triple MH Service Inc.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Custom Config & Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Open Sans', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316', // Orange-500
+                            600: '#ea580c',
+                            900: '#111827', // Gray-900 (Dark background)
+                            950: '#030712', // Very dark
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "linear-gradient(to right bottom, rgba(3, 7, 18, 0.9), rgba(3, 7, 18, 0.8)), url('https://picsum.photos/id/195/1920/1080')",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Utilities */
+        .glass-nav {
+            background: rgba(3, 7, 18, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .section-padding {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        /* Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hover-card-zoom {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-card-zoom:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px -10px rgba(249, 115, 22, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-brand-950 text-gray-300 font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white">
+
+    <!-- 1. Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-2xl font-heading font-extrabold text-white tracking-wider flex items-center gap-2">
+                <i class="fa-solid fa-layer-group text-brand-500"></i>
+                TRIPLE MH <span class="text-brand-500">SERVICE</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="text-sm font-semibold hover:text-brand-500 transition-colors uppercase tracking-widest">Home</a>
+                <a href="#about" class="text-sm font-semibold hover:text-brand-500 transition-colors uppercase tracking-widest">About</a>
+                <a href="#services" class="text-sm font-semibold hover:text-brand-500 transition-colors uppercase tracking-widest">Services</a>
+                <a href="#projects" class="text-sm font-semibold hover:text-brand-500 transition-colors uppercase tracking-widest">Projects</a>
+                <a href="#contact" class="px-5 py-2 bg-brand-600 hover:bg-brand-500 text-white text-sm font-bold uppercase rounded transition-all shadow-lg shadow-brand-500/20">Get Quote</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-900 absolute w-full left-0 top-full border-t border-gray-800">
+            <div class="flex flex-col p-6 space-y-4">
+                <a href="#home" class="block text-gray-300 hover:text-brand-500 font-semibold">Home</a>
+                <a href="#about" class="block text-gray-300 hover:text-brand-500 font-semibold">About</a>
+                <a href="#services" class="block text-gray-300 hover:text-brand-500 font-semibold">Services</a>
+                <a href="#contact" class="block text-brand-500 font-bold">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <header id="home" class="relative h-screen flex items-center justify-center bg-hero-pattern bg-cover bg-center bg-fixed bg-no-repeat">
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-950 via-transparent to-transparent"></div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <span class="inline-block py-1 px-3 border border-brand-500/50 rounded-full bg-brand-500/10 text-brand-500 text-xs font-bold tracking-widest uppercase mb-6 reveal">
+                Global Logistics & Industrial Engineering
+            </span>
+            <h1 class="text-5xl md:text-7xl font-heading font-extrabold text-white mb-6 leading-tight reveal" style="transition-delay: 100ms;">
+                BUILDING THE <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-500 to-yellow-500">FUTURE INFRASTRUCTURE</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 reveal" style="transition-delay: 200ms;">
+                Triple MH Service Inc delivers world-class engineering, logistics, and heavy industrial solutions. We connect markets, build foundations, and accelerate growth.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center reveal" style="transition-delay: 300ms;">
+                <a href="#services" class="px-8 py-4 bg-brand-600 hover:bg-brand-500 text-white font-bold rounded shadow-lg shadow-brand-500/30 transition-all transform hover:-translate-y-1">
+                    Explore Solutions
+                </a>
+                <a href="#contact" class="px-8 py-4 bg-transparent border border-white text-white hover:bg-white hover:text-brand-950 font-bold rounded transition-all">
+                    Contact Our Team
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#partners" class="text-gray-500 hover:text-brand-500 transition-colors">
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- 3. Trusted Partners (Logos) -->
+    <section id="partners" class="py-10 bg-brand-900 border-b border-gray-800">
+        <div class="container mx-auto px-6">
+            <p class="text-center text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Trusted by Industry Leaders</p>
+            <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <!-- Using FontAwesome icons as logo placeholders for demo -->
+                <div class="text-3xl flex items-center gap-2"><i class="fab fa-aws"></i> <span class="text-xl font-heading font-bold">Amazonia</span></div>
+                <div class="text-3xl flex items-center gap-2"><i class="fab fa-google"></i> <span class="text-xl font-heading font-bold">Alphabet</span></div>
+                <div class="text-3xl flex items-center gap-2"><i class="fab fa-stripe"></i> <span class="text-xl font-heading font-bold">Stripe</span></div>
+                <div class="text-3xl flex items-center gap-2"><i class="fab fa-lyft"></i> <span class="text-xl font-heading font-bold">Lyft</span></div>
+                <div class="text-3xl flex items-center gap-2"><i class="fab fa-pied-piper"></i> <span class="text-xl font-heading font-bold">PiedPiper</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. About Us -->
+    <section id="about" class="section-padding relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h4 class="text-brand-500 font-bold uppercase tracking-widest mb-2">Who We Are</h4>
+                    <h2 class="text-4xl font-heading font-bold text-white mb-6">Redefining Excellence in <br>Industrial Services</h2>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        Established in 2005, Triple MH Service Inc has evolved from a local freight provider to a multinational conglomerate handling complex logistics, heavy construction, and supply chain management.
+                    </p>
+                    <p class="text-gray-400 mb-8 leading-relaxed">
+                        We don't just move cargo or build structures; we engineer efficiency. Our proprietary technology and expert workforce ensure that your projects are delivered on time, every time, regardless of complexity.
+                    </p>
+                    
+                    <div class="flex items-center gap-4">
+                        <img src="https://picsum.photos/id/1005/60/60" alt="CEO" class="rounded-full border-2 border-brand-500">
+                        <div>
+                            <p class="text-white font-bold">Michael Harris</p>
+                            <p class="text-sm text-brand-500">Founder & CEO</p>
+                        </div>
+                        <img src="https://picsum.photos/id/338/100/60" class="ml-auto opacity-50 filter invert" alt="Signature">
+                    </div>
+                </div>
+                <div class="relative reveal delay-150">
+                    <div class="absolute -inset-4 bg-brand-500/20 rounded-lg blur-xl"></div>
+                    <img src="https://picsum.photos/id/1076/600/700" alt="Construction Site" class="relative rounded-lg shadow-2xl grayscale hover:grayscale-0 transition-all duration-700">
+                    <div class="absolute -bottom-6 -left-6 bg-brand-900 p-6 rounded-lg shadow-xl border border-gray-800">
+                        <p class="text-4xl font-bold text-brand-500">25+</p>
+                        <p class="text-sm text-white uppercase tracking-wider">Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Core Values -->
+    <section class="py-20 bg-brand-900">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-brand-950 p-8 rounded-lg border border-gray-800 hover:border-brand-500 transition-colors reveal">
+                    <div class="w-14 h-14 bg-brand-900 rounded flex items-center justify-center text-brand-500 text-2xl mb-6">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Safety First</h3>
+                    <p class="text-gray-400 text-sm">We maintain the highest safety standards in the industry. Zero compromise on the well-being of our team and cargo.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-brand-950 p-8 rounded-lg border border-gray-800 hover:border-brand-500 transition-colors reveal delay-100">
+                    <div class="w-14 h-14 bg-brand-900 rounded flex items-center justify-center text-brand-500 text-2xl mb-6">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Precision Timing</h3>
+                    <p class="text-gray-400 text-sm">In logistics, time is currency. Our AI-driven scheduling ensures 99.9% on-time delivery rates globally.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-brand-950 p-8 rounded-lg border border-gray-800 hover:border-brand-500 transition-colors reveal delay-200">
+                    <div class="w-14 h-14 bg-brand-900 rounded flex items-center justify-center text-brand-500 text-2xl mb-6">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Global Reach</h3>
+                    <p class="text-gray-400 text-sm">Operating in over 50 countries, we navigate complex customs and terrain to get you where you need to be.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Statistics Counter -->
+    <section class="py-16 bg-brand-600 relative">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="reveal">
+                    <p class="text-4xl md:text-5xl font-extrabold text-white mb-2">12k+</p>
+                    <p class="text-brand-100 font-semibold uppercase text-sm tracking-wider">Projects Completed</p>
+                </div>
+                <div class="reveal delay-100">
+                    <p class="text-4xl md:text-5xl font-extrabold text-white mb-2">850</p>
+                    <p class="text-brand-100 font-semibold uppercase text-sm tracking-wider">Global Partners</p>
+                </div>
+                <div class="reveal delay-200">
+                    <p class="text-4xl md:text-5xl font-extrabold text-white mb-2">50+</p>
+                    <p class="text-brand-100 font-semibold uppercase text-sm tracking-wider">Countries Served</p>
+                </div>
+                <div class="reveal delay-300">
+                    <p class="text-4xl md:text-5xl font-extrabold text-white mb-2">24/7</p>
+                    <p class="text-brand-100 font-semibold uppercase text-sm tracking-wider">Support Active</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Services Intro -->
+    <section id="services" class="section-padding bg-brand-950">
+        <div class="container mx-auto px-6 text-center mb-16">
+            <span class="text-brand-500 font-bold uppercase tracking-widest text-sm">What We Do</span>
+            <h2 class="text-4xl font-heading font-bold text-white mt-2">Integrated Service Solutions</h2>
+            <div class="w-20 h-1 bg-brand-500 mx-auto mt-6"></div>
+        </div>
+
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="group relative overflow-hidden rounded-xl h-80 hover-card-zoom reveal">
+                <img src="https://picsum.photos/id/119/600/400" alt="Logistics" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent p-8 flex flex-col justify-end">
+                    <i class="fa-solid fa-truck-fast text-brand-500 text-3xl mb-4"></i>
+                    <h3 class="text-2xl font-bold text-white mb-2">Freight & Logistics</h3>
+                    <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0">Overland, air, and sea freight solutions tailored to your timeline.</p>
+                </div>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="group relative overflow-hidden rounded-xl h-80 hover-card-zoom reveal delay-100">
+                <img src="https://picsum.photos/id/1076/600/400" alt="Construction" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent p-8 flex flex-col justify-end">
+                    <i class="fa-solid fa-trowel-bricks text-brand-500 text-3xl mb-4"></i>
+                    <h3 class="text-2xl font-bold text-white mb-2">Industrial Construction</h3>
+                    <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0">Building warehouses, factories, and infrastructure with precision.</p>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="group relative overflow-hidden rounded-xl h-80 hover-card-zoom reveal delay-200">
+                <img src="https://picsum.photos/id/0/600/400" alt="Consulting" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent p-8 flex flex-col justify-end">
+                    <i class="fa-solid fa-chart-line text-brand-500 text-3xl mb-4"></i>
+                    <h3 class="text-2xl font-bold text-white mb-2">Supply Chain Tech</h3>
+                    <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0">Digital transformation consulting for modern inventory management.</p>
+                </div>
+            </div>
+             <!-- Service 4 -->
+             <div class="group relative overflow-hidden rounded-xl h-80 hover-card-zoom reveal delay-100">
+                <img src="https://picsum.photos/id/192/600/400" alt="Warehousing" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent p-8 flex flex-col justify-end">
+                    <i class="fa-solid fa-warehouse text-brand-500 text-3xl mb-4"></i>
+                    <h3 class="text-2xl font-bold text-white mb-2">Smart Warehousing</h3>
+                    <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0">Automated storage and retrieval systems for high-volume goods.</p>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="group relative overflow-hidden rounded-xl h-80 hover-card-zoom reveal delay-200">
+                <img src="https://picsum.photos/id/370/600/400" alt="Energy" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent p-8 flex flex-col justify-end">
+                    <i class="fa-solid fa-bolt text-brand-500 text-3xl mb-4"></i>
+                    <h3 class="text-2xl font-bold text-white mb-2">Energy Logistics</h3>
+                    <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0">Specialized handling for oil, gas, and renewable energy sectors.</p>
+                </div>
+            </div>
+             <!-- Service 6 -->
+             <div class="group relative overflow-hidden rounded-xl h-80 hover-card-zoom reveal delay-200">
+                <img src="https://picsum.photos/id/60/600/400" alt="Customs" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent p-8 flex flex-col justify-end">
+                    <i class="fa-solid fa-passport text-brand-500 text-3xl mb-4"></i>
+                    <h3 class="text-2xl font-bold text-white mb-2">Customs Brokerage</h3>
+                    <p class="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-4 group-hover:translate-y-0">Navigating international regulations to keep your cargo moving.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Detailed Feature: Network -->
+    <section class="py-20 bg-brand-900 border-y border-gray-800">
+        <div class="container mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
+            <div class="lg:w-1/2 reveal">
+                <img src="https://picsum.photos/id/103/800/600" alt="Global Network" class="rounded-lg shadow-2xl border border-gray-700">
+            </div>
+            <div class="lg:w-1/2 reveal">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="h-px w-8 bg-brand-500"></span>
+                    <span class="text-brand-500 font-bold uppercase text-sm">Our Reach</span>
+                </div>
+                <h3 class="text-3xl font-heading font-bold text-white mb-6">Seamless Connections Across Continents</h3>
+                <p class="text-gray-400 mb-6">
+                    Our intermodal network combines rail, road, and ocean transport into a single cohesive strategy. We utilize advanced telemetry to track shipments in real-time, giving you total visibility from factory floor to doorstep.
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-center gap-3 text-gray-300">
+                        <i class="fa-solid fa-check-circle text-brand-500"></i>
+                        <span>24-Hour Express Air Freight</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-gray-300">
+                        <i class="fa-solid fa-check-circle text-brand-500"></i>
+                        <span>Temperature-Controlled Containers</span>
+                    </li>
+                    <li class="flex items-center gap-3 text-gray-300">
+                        <i class="fa-solid fa-check-circle text-brand-500"></i>
+                        <span>Secure High-Value Asset Transport</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Process / How It Works -->
+    <section class="section-padding bg-brand-950">
+        <div class="container mx-auto px-6 text-center mb-16">
+            <h2 class="text-3xl font-heading font-bold text-white">Our Methodology</h2>
+        </div>
+        <div class="container mx-auto px-6 relative">
+            <!-- Connecting Line -->
+            <div class="hidden md:block absolute top-12 left-10 right-10 h-0.5 bg-gray-800 z-0"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+                <!-- Step 1 -->
+                <div class="text-center reveal">
+                    <div class="w-24 h-24 mx-auto bg-brand-900 border-2 border-brand-500 rounded-full flex items-center justify-center text-3xl font-bold text-white mb-6 shadow-lg shadow-brand-500/20">01</div>
+                    <h4 class="text-xl font-bold text-white mb-2">Consultation</h4>
+                    <p class="text-gray-400 text-sm">We analyze your specific logistics or construction needs.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="text-center reveal delay-100">
+                    <div class="w-24 h-24 mx-auto bg-brand-900 border-2 border-gray-700 rounded-full flex items-center justify-center text-3xl font-bold text-white mb-6 group hover:border-brand-500 transition-colors">02</div>
+                    <h4 class="text-xl font-bold text-white mb-2">Planning</h4>
+                    <p class="text-gray-400 text-sm">Our engineers draft a comprehensive, cost-effective roadmap.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="text-center reveal delay-200">
+                    <div class="w-24 h-24 mx-auto bg-brand-900 border-2 border-gray-700 rounded-full flex items-center justify-center text-3xl font-bold text-white mb-6 group hover:border-brand-500 transition-colors">03</div>
+                    <h4 class="text-xl font-bold text-white mb-2">Execution</h4>
+                    <p class="text-gray-400 text-sm">Implementation using state-of-the-art machinery and fleets.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="text-center reveal delay-300">
+                    <div class="w-24 h-24 mx-auto bg-brand-900 border-2 border-gray-700 rounded-full flex items-center justify-center text-3xl font-bold text-white mb-6 group hover:border-brand-500 transition-colors">04</div>
+                    <h4 class="text-xl font-bold text-white mb-2">Delivery</h4>
+                    <p class="text-gray-400 text-sm">Final handover, inspection, and post-project support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Industries Served -->
+    <section class="py-16 bg-brand-900">
+        <div class="container mx-auto px-6">
+            <h3 class="text-2xl font-bold text-white mb-8">Industries We Serve</h3>
+            <div class="flex flex-wrap gap-4">
+                <span class="px-6 py-3 bg-brand-950 border border-gray-800 text-gray-300 rounded-full text-sm hover:border-brand-500 hover:text-white transition-colors cursor-default">Automotive</span>
+                <span class="px-6 py-3 bg-brand-950 border border-gray-800 text-gray-300 rounded-full text-sm hover:border-brand-500 hover:text-white transition-colors cursor-default">Pharmaceuticals</span>
+                <span class="px-6 py-3 bg-brand-950 border border-gray-800 text-gray-300 rounded-full text-sm hover:border-brand-500 hover:text-white transition-colors cursor-default">Oil & Gas</span>
+                <span class="px-6 py-3 bg-brand-950 border border-gray-800 text-gray-300 rounded-full text-sm hover:border-brand-500 hover:text-white transition-colors cursor-default">Retail & E-Commerce</span>
+                <span class="px-6 py-3 bg-brand-950 border border-gray-800 text-gray-300 rounded-full text-sm hover:border-brand-500 hover:text-white transition-colors cursor-default">Aerospace</span>
+                <span class="px-6 py-3 bg-brand-950 border border-gray-800 text-gray-300 rounded-full text-sm hover:border-brand-500 hover:text-white transition-colors cursor-default">Heavy Machinery</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Call to Action Strip -->
+    <section class="py-12 bg-brand-600">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
+            <div class="mb-6 md:mb-0">
+                <h3 class="text-2xl font-bold text-white">Ready to optimize your operations?</h3>
+                <p class="text-brand-100">Get a free consultation with our senior project managers today.</p>
+            </div>
+            <a href="#contact" class="px-8 py-4 bg-white text-brand-600 font-bold rounded shadow hover:bg-gray-100 transition-colors">
+                Request Quote
+            </a>
+        </div>
+    </section>
+
+    <!-- 12. Portfolio / Projects -->
+    <section id="projects" class="section-padding bg-brand-950">
+        <div class="container mx-auto px-6 mb-12 flex justify-between items-end">
+            <div>
+                <span class="text-brand-500 font-bold uppercase text-sm">Portfolio</span>
+                <h2 class="text-3xl font-heading font-bold text-white">Featured Projects</h2>
+            </div>
+            <a href="#" class="hidden md:block text-brand-500 hover:text-white transition-colors">View All Projects <i class="fa-solid fa-arrow-right ml-2"></i></a>
+        </div>
+        
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Project 1 -->
+            <div class="relative group cursor-pointer reveal">
+                <img src="https://picsum.photos/id/142/600/500" class="w-full h-80 object-cover rounded-lg filter brightness-75 group-hover:brightness-100 transition-all">
+                <div class="absolute bottom-0 left-0 p-6">
+                    <span class="bg-brand-500 text-white text-xs px-2 py-1 rounded">Logistics</span>
+                    <h3 class="text-xl font-bold text-white mt-2">North Sea Pipeline Transport</h3>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="relative group cursor-pointer reveal delay-100">
+                <img src="https://picsum.photos/id/180/600/500" class="w-full h-80 object-cover rounded-lg filter brightness-75 group-hover:brightness-100 transition-all">
+                <div class="absolute bottom-0 left-0 p-6">
+                    <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded">Technology</span>
+                    <h3 class="text-xl font-bold text-white mt-2">Automated Hub - Berlin</h3>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="relative group cursor-pointer reveal delay-200">
+                <img src="https://picsum.photos/id/250/600/500" class="w-full h-80 object-cover rounded-lg filter brightness-75 group-hover:brightness-100 transition-all">
+                <div class="absolute bottom-0 left-0 p-6">
+                    <span class="bg-green-600 text-white text-xs px-2 py-1 rounded">Sustainability</span>
+                    <h3 class="text-xl font-bold text-white mt-2">Green Fleet Initiative</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. Testimonials -->
+    <section class="py-20 bg-brand-900">
+        <div class="container mx-auto px-6 text-center max-w-4xl">
+            <i class="fa-solid fa-quote-left text-4xl text-brand-500 mb-6 opacity-50"></i>
+            <h3 class="text-2xl md:text-3xl font-light italic text-white mb-8 leading-relaxed">
+                "Triple MH Service transformed our Asian distribution network. Their attention to detail and ability to handle crisis situations is unmatched in the industry. Truly a partner you can rely on."
+            </h3>
+            <div class="flex items-center justify-center gap-4">
+                <img src="https://picsum.photos/id/447/50/50" class="rounded-full border border-gray-600">
+                <div class="text-left">
+                    <p class="text-white font-bold">Sarah Jenkins</p>
+                    <p class="text-sm text-gray-500">COO, TechFlow Dynamics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. Team Section -->
+    <section class="section-padding bg-brand-950">
+        <div class="container mx-auto px-6 text-center mb-12">
+            <h2 class="text-3xl font-heading font-bold text-white">Leadership Team</h2>
+        </div>
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="text-center reveal">
+                <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-2 border-brand-500">
+                    <img src="https://picsum.photos/id/1005/200/200" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-white font-bold">Michael Harris</h4>
+                <p class="text-brand-500 text-sm">CEO & Founder</p>
+            </div>
+            <div class="text-center reveal delay-100">
+                <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-2 border-gray-700 hover:border-brand-500 transition-colors">
+                    <img src="https://picsum.photos/id/1011/200/200" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-white font-bold">Elena Rodriguez</h4>
+                <p class="text-gray-500 text-sm">Head of Logistics</p>
+            </div>
+            <div class="text-center reveal delay-200">
+                <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-2 border-gray-700 hover:border-brand-500 transition-colors">
+                    <img src="https://picsum.photos/id/1027/200/200" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-white font-bold">David Chen</h4>
+                <p class="text-gray-500 text-sm">Chief Engineer</p>
+            </div>
+            <div class="text-center reveal delay-300">
+                <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-2 border-gray-700 hover:border-brand-500 transition-colors">
+                    <img src="https://picsum.photos/id/338/200/200" class="w-full h-full object-cover">
+                </div>
+                <h4 class="text-white font-bold">Sarah Kline</h4>
+                <p class="text-gray-500 text-sm">Operations Director</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 15. FAQ Section -->
+    <section class="py-16 bg-brand-900 border-t border-gray-800">
+        <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+                <span class="text-brand-500 font-bold uppercase text-sm">Common Questions</span>
+                <h2 class="text-3xl font-heading font-bold text-white mt-2 mb-6">Frequently Asked<br>Questions</h2>
+                <p class="text-gray-400">Can't find the answer you are looking for? Contact our support team directly.</p>
+            </div>
+            <div class="space-y-4">
+                <div class="bg-brand-950 p-4 rounded border border-gray-800">
+                    <h4 class="text-white font-bold mb-2">How do I track my international shipment?</h4>
+                    <p class="text-gray-400 text-sm">You can use our client portal with the tracking ID provided at booking. Updates are real-time.</p>
+                </div>
+                <div class="bg-brand-950 p-4 rounded border border-gray-800">
+                    <h4 class="text-white font-bold mb-2">Do you handle hazardous materials?</h4>
+                    <p class="text-gray-400 text-sm">Yes, we are fully certified to transport Class 1-9 hazardous materials across Europe and North America.</p>
+                </div>
+                <div class="bg-brand-950 p-4 rounded border border-gray-800">
+                    <h4 class="text-white font-bold mb-2">What is your service coverage area?</h4>
+                    <p class="text-gray-400 text-sm">We operate hubs in 50+ countries. See our "Global Network" page for a detailed map.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 16. Latest News / Blog -->
+    <section class="section-padding bg-brand-950">
+        <div class="container mx-auto px-6 text-center mb-12">
+            <h2 class="text-3xl font-heading font-bold text-white">Insights & News</h2>
+        </div>
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <article class="bg-brand-900 rounded-lg overflow-hidden border border-gray-800 hover:border-brand-500 transition-colors reveal">
+                <img src="https://picsum.photos/id/1058/400/250" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="text-brand-500 text-xs font-bold uppercase">Oct 24, 2023</span>
+                    <h3 class="text-lg font-bold text-white mt-2 mb-3">The Future of Autonomous Trucking</h3>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white">Read More &rarr;</a>
+                </div>
+            </article>
+            <article class="bg-brand-900 rounded-lg overflow-hidden border border-gray-800 hover:border-brand-500 transition-colors reveal delay-100">
+                <img src="https://picsum.photos/id/1050/400/250" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="text-brand-500 text-xs font-bold uppercase">Nov 12, 2023</span>
+                    <h3 class="text-lg font-bold text-white mt-2 mb-3">Expanding our Asian Pacific Hub</h3>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white">Read More &rarr;</a>
+                </div>
+            </article>
+            <article class="bg-brand-900 rounded-lg overflow-hidden border border-gray-800 hover:border-brand-500 transition-colors reveal delay-200">
+                <img src="https://picsum.photos/id/1033/400/250" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <span class="text-brand-500 text-xs font-bold uppercase">Dec 01, 2023</span>
+                    <h3 class="text-lg font-bold text-white mt-2 mb-3">Sustainability Report 2023</h3>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white">Read More &rarr;</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- 17. Newsletter -->
+    <section class="py-16 bg-brand-500">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-heading font-bold text-white mb-4">Stay Ahead of the Curve</h2>
+            <p class="text-brand-950 mb-8 font-medium">Join our newsletter for industry insights and company updates.</p>
+            <form class="flex flex-col md:flex-row justify-center gap-4 max-w-lg mx-auto">
+                <input type="email" placeholder="Enter your email address" class="px-6 py-3 rounded text-gray-900 focus:outline-none w-full shadow-lg">
+                <button type="submit" class="px-8 py-3 bg-brand-950 text-white font-bold rounded shadow-lg hover:bg-gray-900 transition-colors">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 18. Contact Section -->
+    <section id="contact" class="section-padding bg-brand-900">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div class="reveal">
+                    <span class="text-brand-500 font-bold uppercase text-sm">Get in Touch</span>
+                    <h2 class="text-4xl font-heading font-bold text-white mt-2 mb-6">Let's Discuss Your Next Project</h2>
+                    <p class="text-gray-400 mb-8">
+                        Our team is ready to provide tailored solutions for your business. Fill out the form or contact us directly via phone or email.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-brand-950 rounded flex items-center justify-center text-brand-500">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-bold">Headquarters</h5>
+                                <p class="text-gray-400 text-sm">123 Logistics Way, Industrial District<br>New York, NY 10001, USA</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-brand-950 rounded flex items-center justify-center text-brand-500">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-bold">Phone</h5>
+                                <p class="text-gray-400 text-sm">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-brand-950 rounded flex items-center justify-center text-brand-500">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-white font-bold">Email</h5>
+                                <p class="text-gray-400 text-sm">inquiry@triplemhservice.cfd</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="bg-brand-950 p-8 rounded-lg border border-gray-800 reveal delay-100 shadow-2xl">
+                    <form onsubmit="event.preventDefault(); alert('Message sent successfully! We will contact you shortly.');">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-gray-500 text-xs uppercase font-bold mb-2">First Name</label>
+                                <input type="text" class="w-full bg-brand-900 border border-gray-800 text-white rounded p-3 focus:border-brand-500 focus:outline-none transition-colors" placeholder="John">
+                            </div>
+                            <div>
+                                <label class="block text-gray-500 text-xs uppercase font-bold mb-2">Last Name</label>
+                                <input type="text" class="w-full bg-brand-900 border border-gray-800 text-white rounded p-3 focus:border-brand-500 focus:outline-none transition-colors" placeholder="Doe">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-500 text-xs uppercase font-bold mb-2">Email Address</label>
+                            <input type="email" class="w-full bg-brand-900 border border-gray-800 text-white rounded p-3 focus:border-brand-500 focus:outline-none transition-colors" placeholder="john@company.com">
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-gray-500 text-xs uppercase font-bold mb-2">Service Interest</label>
+                            <select class="w-full bg-brand-900 border border-gray-800 text-white rounded p-3 focus:border-brand-500 focus:outline-none transition-colors">
+                                <option>Logistics & Freight</option>
+                                <option>Construction & Engineering</option>
+                                <option>Supply Chain Consulting</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-8">
+                            <label class="block text-gray-500 text-xs uppercase font-bold mb-2">Message</label>
+                            <textarea rows="4" class="w-full bg-brand-900 border border-gray-800 text-white rounded p-3 focus:border-brand-500 focus:outline-none transition-colors" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-600 hover:bg-brand-500 text-white font-bold py-4 rounded transition-all transform hover:-translate-y-1">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 19. Footer -->
+    <footer class="bg-black pt-20 pb-10 border-t border-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Col 1 -->
+                <div>
+                    <a href="#" class="text-xl font-heading font-extrabold text-white tracking-wider flex items-center gap-2 mb-6">
+                        <i class="fa-solid fa-layer-group text-brand-500"></i>
+                        TRIPLE MH
+                    </a>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                        A global leader in integrated logistics and industrial services. We build the connections that power the world's economy.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 bg-gray-900 rounded flex items-center justify-center text-gray-400 hover:bg-brand-500 hover:text-white transition-all"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-900 rounded flex items-center justify-center text-gray-400 hover:bg-brand-500 hover:text-white transition-all"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 bg-gray-900 rounded flex items-center justify-center text-gray-400 hover:bg-brand-500 hover:text-white transition-all"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Services</h4>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Air Freight</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Ocean Freight</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Contract Logistics</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Industrial Engineering</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Project Management</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Company</h4>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Investor Relations</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Sustainability</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Newsroom</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Legal</h4>
+                    <ul class="space-y-3 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Cookie Policy</a></li>
+                        <li><a href="#" class="hover:text-brand-500 transition-colors">Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-900 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-600 text-sm">&copy; 2024 Triple MH Service Inc. All rights reserved.</p>
+                <p class="text-gray-600 text-sm mt-2 md:mt-0">www.triplemhservice.cfd</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('glass-nav');
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('glass-nav');
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        // Scroll Reveal Animation
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 100;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        reveal();
+    </script>
+</body>
+</html>
